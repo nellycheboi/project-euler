@@ -11,7 +11,7 @@ namespace ProjectEuler
 		
 		public static void Main(string[] args)
 		{
-			Problems.MultiplesOf3And5();
+			Problems.EvenFibonacciNumbers();
 
 			// Keeps console open on debug mode
 			KeepConsoleOpen();
