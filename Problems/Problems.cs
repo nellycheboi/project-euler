@@ -1,10 +1,10 @@
 ﻿using System;
-
+using System.Linq;
 namespace ProjectEuler
 {
     public class Problems
     {
-        public static void MultiplesOf3And5()
+        public  void MultiplesOf3And5()
         {
            
                 Puts("Find the sum of all the multiples of 3 and 5 below a limit. Input a limit", out string input);
@@ -19,7 +19,7 @@ namespace ProjectEuler
                 }
             
         }
-        public static void EvenFibonacciNumbers()
+        public void EvenFibonacciNumbers()
         {
          
                 Puts("Find the sum all of all even valued fibonnaci numbers below a limit. Input a limit",  out string input);
@@ -35,7 +35,7 @@ namespace ProjectEuler
                 }
          
         }
-        public static void LargestPrimeFactor()
+        public  void LargestPrimeFactor()
         {
 
             Puts("Find the largest prime factor of a number. Input a number", out string input);
@@ -62,7 +62,7 @@ namespace ProjectEuler
         /// </summary>
         /// <param name="limit"></param>
         /// <returns></returns>
-        private static ulong MultiplesOf3And5(long limit)
+        private  ulong MultiplesOf3And5(long limit)
         {
 
             ulong currentSum = 0;
@@ -83,7 +83,7 @@ namespace ProjectEuler
         /// </summary>
         /// <param name="limit"></param>
         /// <returns></returns>
-        private static ulong EvenFibonacciNumbers(long limit)
+        private  ulong EvenFibonacciNumbers(long limit)
         {
             (long prev, long current) = (1, 2);
             ulong totalSum = 0;
@@ -117,7 +117,7 @@ namespace ProjectEuler
         /// </summary>
         /// <param name="number"></param>
         /// <returns></returns>
-        private static long LargestPrimeFactor(long number)
+        private  long LargestPrimeFactor(long number)
         {
             long largest = 0;
             for(long i = 2; i <= Math.Sqrt(number); i++)
@@ -143,7 +143,7 @@ namespace ProjectEuler
             }
             return largest;
         }
-        private static bool IsPrime(long number)
+        private  bool IsPrime(long number)
         {
             if(number == 2)
             {
@@ -158,10 +158,11 @@ namespace ProjectEuler
             }
             return true;
         }
+
         #endregion
 
         #region Helpers
-        private static void Puts(string input, out string output)
+        private  void Puts(string input, out string output)
         {
             Console.WriteLine("CTRL+C to interrupt the read operation:");
 
@@ -169,7 +170,7 @@ namespace ProjectEuler
             output = Console.ReadLine();
 
         }
-        private static void Puts(string input = "")
+        private  void Puts(string input = "")
         {
             Console.WriteLine($"{ input}");
 

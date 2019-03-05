@@ -8,6 +8,7 @@ namespace ProjectEuler
 {
 	class Program
 	{
+        static Problems  _problem = new Problems();
 		
 		public static void Main(string[] args)
 		{
@@ -16,7 +17,7 @@ namespace ProjectEuler
 
             while (true)
             {
-                Problems.LargestPrimeFactor();
+                _problem.LargestPrimeFactor();
             }
 
             // Keeps console open on debug mode
